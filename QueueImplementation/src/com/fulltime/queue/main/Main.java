@@ -11,50 +11,35 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Queue queue = new Queue(5);
-		String[] queueArr;
+		int dequeue;
 		
-		queue.enqueue("14");
-		queue.enqueue("15");
-		queue.enqueue("16");
-		queue.enqueue("17");
-		queueArr = queue.enqueue("18");
-		for(String element: queueArr) {
-			System.out.print(element + " ");
-		}
+		queue.enqueue(14);
+		queue.enqueue(15);
+		queue.enqueue(16);
+		queue.enqueue(17);
+	    queue.enqueue(18);
+			
+		queue.enqueue(19);
 		
-		queue.enqueue("19");
+		dequeue = queue.dequeue();
+		System.out.println(dequeue);
 		
-		queueArr = queue.dequeue();
-		System.out.println("");
-		for(String element: queueArr) {
-			System.out.print(element + " ");
-		}
-		queueArr = queue.dequeue();
-		System.out.println("");
-		for(String element: queueArr) {
-			System.out.print(element + " ");
-		}
-		queueArr = queue.dequeue();
-		System.out.println("");
-		for(String element: queueArr) {
-			System.out.print(element + " ");
-		}
-		queueArr = queue.dequeue();
-		System.out.println("");
-		for(String element: queueArr) {
-			System.out.print(element + " ");
-		}
-		queueArr = queue.dequeue();
-		System.out.println("");
-		for(String element: queueArr) {
-			System.out.print(element + " ");
-		}
-		queueArr = queue.dequeue();
-		System.out.println("");
-		for(String element: queueArr) {
-			System.out.print(element + " ");
-		}
-
+		
+		dequeue = queue.dequeue();
+		System.out.println(dequeue);
+		
+		dequeue = queue.dequeue();
+		System.out.println(dequeue);
+		
+		dequeue = queue.dequeue();
+		System.out.println(dequeue);
+		
+		dequeue = queue.dequeue();
+		System.out.println(dequeue);
+	
+		dequeue = queue.dequeue();
+		System.out.println(dequeue);
+		
 	}
 
 }
