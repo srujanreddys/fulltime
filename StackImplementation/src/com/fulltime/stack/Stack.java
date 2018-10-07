@@ -27,7 +27,7 @@ public class Stack {
 	 * @return the Array with elements pushed
 	 */
 	public void push(int x) {
-		if(top < 0 || top > size-1) {
+		if(top > size-1) {
 			System.out.println("index exceeded the size");
 		}else {
 			stackArr[top] = x;
@@ -44,10 +44,10 @@ public class Stack {
 	 */
 	public int pop() {
 
-		if(stackArr.length > 0 && top >0) {
+		if(top >0) {
 			top --;
 		}else {
-			stackArr[top] = 0;
+			
 			System.out.println("Stack is empty");
 		}
 		return stackArr[top];

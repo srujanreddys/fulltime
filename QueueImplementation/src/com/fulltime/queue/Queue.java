@@ -42,19 +42,19 @@ public class Queue {
 		
 	}
 	/**
-	 * removing the first element from the queue and moving head and tail pointers
+	 * removing the first element from the queue and moving head pointer
 	 * @return an array with first element removed
 	 */
 	public int dequeue() {
 		if(queueArr.length > 0  ) {
 			if(head !=tail) {
-				  tail--;
+				  head++;
 			}
 			else {
+				queueArr[head-1] =0;
 				System.out.println("queue is empty. there is nothing to dequeue");
-				queueArr[tail] = 0;
 			}
 		}
-		return queueArr[tail];
+		return queueArr[head-1];
 	}
 }
