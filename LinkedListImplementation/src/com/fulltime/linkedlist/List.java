@@ -114,10 +114,14 @@ public class List {
 	 */
 	public void deleteEndElement() {
 		node = headNode;
-		while(node.getNextNodeAddress().getNextNodeAddress() != null) {
-			node = node.getNextNodeAddress();
+		if(node!= null) {
+			while(node.getNextNodeAddress().getNextNodeAddress() != null) {
+				node = node.getNextNodeAddress();
+			}
+			node.setNextNodeAddress(null);
 		}
-		node.setNextNodeAddress(null);
+		
+
 
 		
 	}
@@ -127,13 +131,16 @@ public class List {
 	 */
 	public void deleteInBetween(int element) {
 		node = headNode;
-		while(node.getNextNodeAddress()!=null && node.getNextNodeAddress().getData() != element) {
-			node = node.getNextNodeAddress();
-		}
-		if(node.getNextNodeAddress() == null && node.getData() != element) {
-			System.out.println("element does not exist in the list");
-		}else {
-			node.setNextNodeAddress(node.getNextNodeAddress().getNextNodeAddress());
+		if(node != null) {
+			while(node.getNextNodeAddress()!=null && node.getNextNodeAddress().getData() != element) {
+				node = node.getNextNodeAddress();
+			}
+			if(node.getNextNodeAddress() == null && node.getData() != element) {
+				System.out.println("element does not exist in the list");
+			}else {
+				node.setNextNodeAddress(node.getNextNodeAddress().getNextNodeAddress());
+			}
+			
 		}
 		
 	} 
